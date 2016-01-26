@@ -10,11 +10,23 @@
     <div id="my-component"></div>
 
     <script>
+
+      var ClickCounter = React.createClass({
+	render: function(){
+	  return (
+	  React.createElement('div', {}, 
+	    React.createElement('button', {}, "CLICK ME")
+	  )
+	 );
+	} 
+      });
+
       ReactDOM.render(
-	  React.createElement('div', {}, 'Hello from React!'),
-	  document.getElementById('my-component')
-	  );
+	React.createElement('ClickCounter', {}, ""),
+	document.getElementById('my-component')
+      );
     </script>
+
   </body>
 
 </html>
